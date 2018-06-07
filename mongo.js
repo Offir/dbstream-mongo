@@ -197,6 +197,7 @@ module.exports.connect = function( url, options ) {
     var callbacks = [];
     conn.open = function ( callback ) {
         getDb( url, options, function ( err, db ) {
+            console.log('---options---', options)
             callback.call( conn, err, err ? null : db.collection( options.collection ) );
         })
     }
