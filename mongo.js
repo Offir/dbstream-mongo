@@ -183,6 +183,7 @@ function getDb ( url, options, callback ) {
 }
 
 module.exports.connect = function( url, options ) {
+    console.log('-------------------------TEST-----------------------------------')
     if ( !options.collection ) {
         throw new Error( "options.collection is required" );
     }
